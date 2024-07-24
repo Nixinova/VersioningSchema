@@ -62,6 +62,10 @@
                     "prefix": {
                         "description": "The character(s) that delimit this segment from its preceding segment.",
                         "type": "string"
+                    },
+                    "breaking": {
+                        "description": "Whether an increment to this segment represents a breaking change for users.",
+                        "type": "boolean"
                     }
                 },
                 "required": [
@@ -69,7 +73,8 @@
                     "required",
                     "order",
                     "sort",
-                    "prefix"
+                    "prefix",
+                    "breaking"
                 ]
             }
         }
