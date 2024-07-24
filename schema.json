@@ -5,6 +5,78 @@
     "description": "A schema for defining the semantics for a user-defined method of versioning specificiation.",
     "type": "object",
     "properties": {
-        
-    }
+        "$comment": {
+            "description": "An ignored comment explaining the schema.",
+            "type": "string"
+        },
+        "$schema": {
+            "description": "The JSON schema to use for validation. Must link to this JSON schema file.",
+            "type": "string"
+        },
+        "$id": {
+            "description": "The URL of the schema file.",
+            "type": "string"
+        },
+        "title": {
+            "description": "A title given to the schema file.",
+            "type": "string"
+        },
+        "description": {
+            "description": "A brief description of the schema file.",
+            "type": "string"
+        },
+        "segments": {
+            "description": "The segments that make up the version string.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "$comment": {
+                        "description": "An ignored comment explaining the segment.",
+                        "type": "string"
+                    },
+                    "$name": {
+                        "description": "A human-readable name for the segment.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "The type of the segment.",
+                        "type": "string"
+                    },
+                    "required": {
+                        "description": "Whether the segment is required for a well-formed version string.",
+                        "type": "boolean"
+                    },
+                    "order": {
+                        "description": "What order the segment appears in the version string.",
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                    },
+                    "sort": {
+                        "description": "The relative ordering effect of this segment on the version string.",
+                        "$comment": "Value must be one of: -1 for preceding, 0 for no effect, or 1 for succeeding.",
+                        "type": "number",
+                        "minimum": -1,
+                        "maximum": 1
+                    },
+                    "prefix": {
+                        "description": "The character(s) that delimit this segment from its preceding segment.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "type",
+                    "required",
+                    "order",
+                    "sort",
+                    "prefix"
+                ]
+            }
+        }
+    },
+    "required": [
+        "$schema",
+        "$id",
+        "segments"
+    ]
 }
