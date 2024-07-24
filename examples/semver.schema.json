@@ -50,7 +50,7 @@
             "order": 5,
             "sort": 0,
             "prefix": "+",
-            "breaking": false
+            "breaking": null
         }
     ]
 }

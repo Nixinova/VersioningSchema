@@ -65,7 +65,11 @@
                     },
                     "breaking": {
                         "description": "Whether an increment to this segment represents a breaking change for users.",
-                        "type": "boolean"
+                        "$comment": "A value of 'null' represents no effect on the determination as a breaking change or not.",
+                        "type": [
+                            "boolean",
+                            "null"
+                        ]
                     }
                 },
                 "required": [
