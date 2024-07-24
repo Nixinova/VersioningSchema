@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://github.com/Nixinova/VersioningSchema/blob/HEAD/schema.json",
+    "title": "VersioningSchema",
+    "description": "A schema for defining the semantics for a user-defined method of versioning specificiation.",
+    "type": "object",
+    "properties": {
+        
+    }
+}
