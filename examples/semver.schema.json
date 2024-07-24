@@ -12,7 +12,10 @@
             "order": 1,
             "sort": 1,
             "prefix": "",
-            "breaking": true
+            "increment": {
+                "breaking": true,
+                "stable": true
+            }
         },
         {
             "$comment": "The second digit in a semantic version; x.Y.z",
@@ -22,7 +25,10 @@
             "order": 2,
             "sort": 1,
             "prefix": ".",
-            "breaking": false
+            "increment": {
+                "breaking": false,
+                "stable": true
+            }
         },
         {
             "$comment": "The third digit in a semantic version; x.y.Z",
@@ -32,7 +38,10 @@
             "order": 3,
             "sort": 1,
             "prefix": ".",
-            "breaking": false
+            "increment": {
+                "breaking": false,
+                "stable": true
+            }
         },
         {
             "$name": "pre-release",
@@ -41,7 +50,10 @@
             "order": 4,
             "sort": -1,
             "prefix": "-",
-            "breaking": false
+            "increment": {
+                "breaking": null,
+                "stable": false
+            }
         },
         {
             "$name": "metadata",
@@ -50,7 +62,10 @@
             "order": 5,
             "sort": 0,
             "prefix": "+",
-            "breaking": null
+            "increment": {
+                "breaking": null,
+                "stable": null
+            }
         }
     ]
 }
