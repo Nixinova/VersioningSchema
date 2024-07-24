@@ -11,7 +11,7 @@
             "required": true,
             "order": 1,
             "sort": 1,
-            "prefix": null
+            "prefix": ""
         },
         {
             "$comment": "The second digit in a semantic version; x.Y.z",
